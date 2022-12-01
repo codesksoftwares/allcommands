@@ -9,7 +9,9 @@ MIGRATION::
 GENERAL:
 ---------------------------
 php spark env production
-
+php spark make:model Modelname
+php spark make:model ProductModel table=products
+php spark make:controller ControllerName
 
 GITHUB:
 --------------------------
