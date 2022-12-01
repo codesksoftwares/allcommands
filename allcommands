@@ -1,0 +1,7 @@
+ALL COMMANDS FOR CI4
+=====================================
+MIGRATION::
+--------------------------
+1) For All Migration: php spark migrate
+2) For Roll Back    : php spark migrate:rollback
+3) New Migrate      : php spark make:migration <class>
