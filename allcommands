@@ -5,3 +5,18 @@ MIGRATION::
 1) For All Migration: php spark migrate
 2) For Roll Back    : php spark migrate:rollback
 3) New Migrate      : php spark make:migration <class>
+
+GITHUB:
+--------------------------
+1) For Clone:  
+git clone [ADDRESS] .
+2) For Pull :  
+git pull origin main
+3) For New or Switch Branch: 
+git checkout -b branchname
+4) for Stagging: 
+git add .
+5) for commit: 
+git commit -m "Comments"
+6) for push 
+git push origin branchname
