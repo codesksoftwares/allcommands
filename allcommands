@@ -6,6 +6,7 @@ MIGRATION::
 2) For Roll Back    : php spark migrate:rollback
 3) New Migrate      : php spark make:migration <class>
 4) seeding          : php spark db:seed <filename>
+5) New Seed         : php spark make:seeder <classname>
 ---------------------------
 GENERAL:
 ---------------------------
