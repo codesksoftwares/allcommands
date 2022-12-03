@@ -1,0 +1,57 @@
+<?php
+//For Mail Sending Start//
+1. Download the PHPmaier LIbrary and include the folder in project folder From https://github.com/codesksoftwares/PHPMailer.git
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+	//Function for SQL Injection//
+function send_email($to,$subject,$message){
+
+require 'mailer/src/Exception.php';
+require 'mailer/src/PHPMailer.php';
+require 'mailer/src/SMTP.php';
+
+
+//SMTP needs accurate times, and the PHP time zone MUST be set
+//This should be done in your php.ini, but this is how to do it if you don't have access to that
+
+//Create a new PHPMailer instance
+$mail = new PHPMailer();
+try {
+
+//Tell PHPMailer to use SMTP
+/* SMTP configuration */
+
+    $mail->isSMTP();
+    $mail->Host     = 'smtp.hostinger.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'no-reply@pranaveehomestay.com';
+    $mail->Password = 'Codesk@1234';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port     = 465;
+   
+    $mail->setFrom('no-reply@pranaveehomestay.com', 'pranaveehomestay');
+    $mail->addReplyTo('info@pranaveehomestay.com', 'pranaveehomestay');
+   
+   	$filter_email = explode(",",$to);
+   	foreach($filter_email AS $email){
+    	/* Add a recipient */
+    	$mail->addAddress($email);
+	}
+
+    /* Add cc or bcc */
+    /* Email subject */
+    $mail->Subject = $subject;
+   
+    /* Set email format to HTML */
+    $mail->isHTML(true);
+    $mail->Body = $message;
+        /* Send email */
+     $mail->send();
+     } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+}
+
+//For Mail Sending Start//
