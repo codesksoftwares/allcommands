@@ -29,3 +29,5 @@ git add .
 git commit -m "Comments"
 6) for push 
 git push origin branchname
+7) FOr Discard Local changes
+git restore .
