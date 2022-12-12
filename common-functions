@@ -63,4 +63,16 @@ try {
 		$new_date	=	$date[2]."-".$date[1]."-".$date[0];
 		return $new_date;
 	}
-	
+// date function imp**
+.u_updt input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
