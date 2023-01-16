@@ -30,4 +30,9 @@ git commit -m "Comments"
 6) for push 
 git push origin branchname
 7) FOr Discard Local changes
-git restore .
+git restore ..
+
+alias gpush='git push origin jebas'
+alias gpull='git pull origin main'
+alias gcl='git clone'
+alias gcom='git commit'
