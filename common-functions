@@ -76,6 +76,8 @@ try {
     top: 0;
     width: auto;
 }
+// current year js function imp**
+a(".current-year").text((new Date).getFullYear())
 
 foreach ($_POST as $key => $value) {
 	echo '$form["'.$key.'"] = $this->request->getVar("'.$key.'");</br>';
