@@ -83,3 +83,9 @@ foreach ($_POST as $key => $value) {
 	echo '$form["'.$key.'"] = $this->request->getVar("'.$key.'");</br>';
 	//get all name from post
 }
+
+// dynamic year in website function imp**
+if ($(".dynamic-year").length) {
+		let currentYear = new Date().getFullYear();
+		$(".dynamic-year").html(currentYear);
+	}
